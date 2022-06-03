@@ -30,7 +30,7 @@ class ServiceArea(models.Model):
     name = models.CharField(max_length=200)
     price = models.DecimalField(max_digits=6 , decimal_places=2, default=0.00)
     polygon = models.TextField()
-    provider = models.ForeignKey('Provider', on_delete=models.CASCADE, default=0)
+    provider_id = models.ForeignKey('Provider', on_delete=models.CASCADE, default=0)
 
     def __str__(self):
         return self.name
