@@ -18,7 +18,7 @@ CURRENCY_CHOICES = [
 class Provider(models.Model):
     name = models.CharField(max_length=200)
     email = models.EmailField()
-    phone_number = models.CharField()
+    phone_number = models.BigIntegerField()
     language = models.CharField(max_length=3, choices=LANGUAGE_CHOICES)
     currency = models.CharField(max_length=3, choices=CURRENCY_CHOICES)
 
